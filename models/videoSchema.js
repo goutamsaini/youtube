@@ -20,6 +20,10 @@ const videoSchema = mongoose.Schema({
   thumbnail: {
     type: String,
   },
+  likes: {
+    type: Number,
+    default: 0,
+  },
   channel: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
@@ -34,4 +38,4 @@ const videoSchema = mongoose.Schema({
 
 const Video = mongoose.model("Video", videoSchema);
 
-module.exports=Video;
+module.exports = Video;
